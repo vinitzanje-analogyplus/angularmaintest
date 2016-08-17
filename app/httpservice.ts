@@ -77,6 +77,8 @@ export class Httptest {
 getUserDetail()
  { 
 
+   console.log("getUserDetail");
+
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     let authToken = localStorage.getItem('auth_token');
