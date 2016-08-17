@@ -15,24 +15,24 @@ const appRoutes: Routes = [
     component: AppLoginComponent,
  
   },
-  {
-    path: 'registration',
-    component: AppRegisterComponent
-  },
-    {
-    path: 'test',
-    component: AppTestComponent
-  },
+  // {
+  //   path: 'registration',
+  //   component: AppRegisterComponent
+  // },
+  //   {
+  //   path: 'test',
+  //   component: AppTestComponent
+  // },
 
   {
     path: 'search',
     component: AppLawyerListComponent
   },
   
-  {
-    path: 'myprofile',
-    component: AppLawyerProfileComponent
-  },
+  // {
+  //   path: 'myprofile',
+  //   component: AppLawyerProfileComponent
+  // },
 {
   path: '',
   redirectTo: '/search',
