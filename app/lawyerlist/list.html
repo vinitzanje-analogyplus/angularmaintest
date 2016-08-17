@@ -1,0 +1,120 @@
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-3" style=""></div>
+    <div class="col-sm-6" style="">
+<!----------------------Table -------------------------------->	
+<table class="table table-hover">
+<thead>
+	<tr>
+	<th class="the" > <button type="button" class="btn btn-success filter">Filters</button>
+	<p style="float:right;">Sort Default:<select style="color:#736c6c;;">
+  <option value="">Details</option>
+  <option value="">List</option>
+  <option value="">Distance</option>
+  <option value="">Rating</option>
+</select></p>
+	
+	</th>
+	
+	</tr>
+</thead>
+<tbody>
+<tr   *ngFor="let mk of mockdata  ">					   
+	<td>
+	<div class="row" >
+    <div class="col-sm-2"><img src="{{mk.image_url}}" class="img-responsive" alt="Cinque Terre" width="70" height="100"></div>
+	 <div class="col-sm-10"><a style=""><b>{{mk.first_name}} {{mk.last_name}}</b></a></div>
+	 <p class="details">{{mk.first_name}} {{mk.email}} </p>
+	 <p style="margin-right:10%;float:right;"><a>Website|Get a Quote|More Info</a></p>
+	 <p style="margin-left:19%;"><a>www.{{mk.email}}.com</a></p>
+	 <div style="text-align:left;margin-left:2%;color:#999;">From Business: Berkeley Electric is a locally owned and operated full-service electrical contracting company that has been serving the Bay Area for over 30 years.</div>
+	 </div>
+	
+	</td> 
+</tr>
+</tbody>
+</table>
+ <!---------------------Tabele Ends------------------------------>
+ </div>
+    <div class="col-sm-3" style=""></div>
+  </div>
+</div>
+
+
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover(); 
+});
+</script>
+Try it Yourself »
+
+<style>
+
+.img-responsive{
+height: 60px;
+}
+
+
+.content{
+    margin-top: -13px;
+    margin-left: 14%;
+	}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+a{
+margin-left:-17px;
+
+}
+
+.the{
+height:40px;
+background-color:#30b18c;
+color:white;
+}
+.th,td {
+height:150px;
+}
+@media screen and (min-width: 768px) {
+   table, th, td {
+    border: 1px solid #dcd6d6;
+    }
+}
+tr td:hover {
+    background-color:;
+}
+
+.filter{
+color:white;
+background-color:#07d4a2;
+height:30px;
+width:13%;
+}
+</style>
+
