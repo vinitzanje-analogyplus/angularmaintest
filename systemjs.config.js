@@ -8,7 +8,6 @@
     'app':                        'app', // 'dist',
     '@angular':                   'node_modules/@angular',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
-    '@angular2-material': 'node_modules/@angular2-material',
     'rxjs':                       'node_modules/rxjs'
   };
   // packages tells the System loader how to load when no filename and/or no extension
@@ -17,20 +16,6 @@
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
   };
-
-const materialComponents = [
-'sidenav'
-];
-
-materialComponents.forEach(name => {
-  packages[`@angular2-material/${name}`] = {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: `${name}.js`,
-  };
-});
-
-
   var ngPackageNames = [
     'common',
     'compiler',

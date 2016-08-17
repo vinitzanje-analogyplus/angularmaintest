@@ -8,8 +8,6 @@ import { routing }        from './app.routing';
 import { HeroesComponent }      from './heroes.component';
 import { DashboardComponent }   from './dashboard.component';
 import { HeroDetailComponent }  from './herodetail';
-import { MdSidenavModule } from '@angular2-material/sidenav/sidenav';
-
 
 import { HeroService }  from './heroservice';
 
@@ -17,8 +15,7 @@ import { HeroService }  from './heroservice';
   imports: [
     BrowserModule,
     FormsModule,
-    routing,
-    MdSidenavModule
+    routing
   ],
   declarations: [
     AppComponent,
