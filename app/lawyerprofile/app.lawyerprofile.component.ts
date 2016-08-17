@@ -19,19 +19,19 @@ export class AppLawyerProfileComponent {
    }
 
 //loggedin:string ;
-   profileimage:any ;
-   public getData;
-   loggedin:string;
-   firstname:any;
-   lastname:any;
-   emailid:any;
-   contactno:any;
-   dob:any;
-   address:any;
-   description:any;
-   aboutme:any;
-   profileid:string;
-   filetest:any;
+   profileimage:any="" ;
+   public getData="";
+   loggedin:string="";
+   firstname:any="";
+   lastname:any="";
+   emailid:any="";
+   contactno:any="";
+   dob:any="";
+   address:any="";
+   description:any="";
+   aboutme:any="";
+   profileid:string="";
+   filetest:any="";
 
   ngOnInit()    {
 
