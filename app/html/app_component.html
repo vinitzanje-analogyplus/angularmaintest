@@ -58,6 +58,8 @@ body {
 			<li><a [routerLink]="['/details']" ><p class="sansserif">Details</p></a></li>
 			<li><a [routerLink]="['/Contact']" ><p class="sansserif">Contact Us</p></a></li>
 		    <li><a [routerLink]="['/test']" ><p class="sansserif">Help</p></a></li>
+            <li><a (click)="Logout()" ><p class="sansserif">Logout</p></a></li>
+
             </ul>
 </div>
 <div id="main" [style.marginLeft.px]="mySize">
