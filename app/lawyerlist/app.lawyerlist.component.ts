@@ -11,7 +11,7 @@ import { Http, Headers } from '@angular/http';
 
   selector: 'app-lawyerlist',
   templateUrl: 'app/lawyerlist/list.html',
-   styleUrls: ['app.component.css'],
+   styleUrls: ['app/lawyerlist/app.component.css'],
  
 
 })
