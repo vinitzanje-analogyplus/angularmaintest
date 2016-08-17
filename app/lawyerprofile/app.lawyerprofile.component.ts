@@ -8,7 +8,7 @@ import { Http, Headers } from '@angular/http';
 @Component({
 
   selector: 'app-lawyerprofile',
-  templateUrl: 'app/lawyerprofile/profile.html',
+  templateUrl: 'app/lawyerprofile/test.html',
    styleUrls: ['app/lawyerprofile/app.component.css']
 
 })
