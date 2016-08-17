@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+
 <style>
 body {
     font-family: "Lato", sans-serif;
@@ -46,7 +45,7 @@ body {
 </style>
 <body>
 
-<div id="mySidenav" class="sidenav">
+<div id="mySidenav" class="sidenav" [style.width.px]="mySize" >
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#">About</a>
   <a href="#">Services</a>
@@ -56,18 +55,8 @@ body {
 
 <h2>Animated Sidenav Example</h2>
 <p>Click on the element below to open the side navigation menu.</p>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-</script>
+<span style="font-size:30px;cursor:pointer" (click)="Open()">&#9776; open</span>
      
 </body>
-</html>
+
 

@@ -4,11 +4,6 @@ import { AppComponent } from './app.component';
 
 const appRoutes: Routes = [
 
-{
-  path: 'Search',
-  redirectTo: '/AppComponent',
-  pathMatch: 'full'
-}
 
 ];
 
