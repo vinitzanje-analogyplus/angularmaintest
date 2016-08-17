@@ -34,36 +34,39 @@ export class AppLawyerProfileComponent {
    filetest:any;
 
   ngOnInit()    {
-     if(localStorage.getItem('auth_token')==null)
-         {
-            this.router.navigate(['/login']);
-         }
-         else{
-       this.loggedin = localStorage.getItem('loggedinuser');
 
-       this.httpService.getUserDetail()
-        .subscribe(
-         data =>{ 
-                        this.getData = data 
-                        console.log(this.getData)
-                        if(this.getData[0].user_profile)
-              {
-                  this.firstname = this.getData[0].user_profile.firstname;
-                   this.lastname = this.getData[0].user_profile.lastname;
-                    this.emailid = this.getData[0].user_profile.emailid;
-                     this.contactno = this.getData[0].user_profile.contactno;
-                      this.dob = this.getData[0].user_profile.dob;
-                       this.address = this.getData[0].user_profile.address;
-                        this.description = this.getData[0].user_profile.descireption;
-                         this.aboutme = this.getData[0].user_profile.aboutme;
-                          this.profileid = this.getData[0].user_profile.id;
-            } 
+    console.log("AppLawyerProfileComponent.ts");
+   
+    //  if(localStorage.getItem('auth_token')==null)
+    //      {
+    //         this.router.navigate(['/login']);
+    //      }
+    //      else{
+    //    this.loggedin = localStorage.getItem('loggedinuser');
+
+    //    this.httpService.getUserDetail()
+    //     .subscribe(
+    //      data =>{ 
+    //                     this.getData = data 
+    //                     console.log(this.getData)
+    //                     if(this.getData[0].user_profile)
+    //           {
+    //               this.firstname = this.getData[0].user_profile.firstname;
+    //                this.lastname = this.getData[0].user_profile.lastname;
+    //                 this.emailid = this.getData[0].user_profile.emailid;
+    //                  this.contactno = this.getData[0].user_profile.contactno;
+    //                   this.dob = this.getData[0].user_profile.dob;
+    //                    this.address = this.getData[0].user_profile.address;
+    //                     this.description = this.getData[0].user_profile.descireption;
+    //                      this.aboutme = this.getData[0].user_profile.aboutme;
+    //                       this.profileid = this.getData[0].user_profile.id;
+    //         } 
                           
-                },
-         error => alert(error),
-         () => console.log()
-         );
-         }
+    //             },
+    //      error => alert(error),
+    //      () => console.log()
+    //      );
+    //      }
    }
 
 doTest()
