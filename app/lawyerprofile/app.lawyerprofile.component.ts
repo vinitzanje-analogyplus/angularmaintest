@@ -40,12 +40,14 @@ export class AppLawyerProfileComponent {
      if(localStorage.getItem('auth_token'))
         {
        this.loggedin = localStorage.getItem('loggedinuser');
-
+       console.log("asda")
        this.httpService.getUserDetail()
         .subscribe(
          data =>{ 
+
+           console.log("sdsds");
                         this.getData = data 
-                        console.log(this.getData)
+                        console.log(this.getData) 
             //             if(this.getData[0].user_profile)
             //   {
             //       this.firstname = this.getData[0].user_profile.firstname;
