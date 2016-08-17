@@ -15,10 +15,9 @@ export class AppLawyerProfileComponent {
  
    constructor (private router: Router,private httpService: Httptest){
 
-    //   console.log("profile.ts");
+   
    }
 
-//loggedin:string ;
    profileimage:any="" ;
    public getData="";
    loggedin:string="";
@@ -37,11 +36,13 @@ export class AppLawyerProfileComponent {
 
     console.log("AppLawyerProfileComponent.ts");
    
-    //  if(localStorage.getItem('auth_token')==null)
-    //      {
-    //         this.router.navigate(['/login']);
-    //      }
-    //      else{
+      if(localStorage.getItem('auth_token'))
+      {
+
+         this.loggedin = localStorage.getItem('loggedinuser');
+          console.log(this.loggedin);
+      }
+        
     //    this.loggedin = localStorage.getItem('loggedinuser');
 
     //    this.httpService.getUserDetail()
