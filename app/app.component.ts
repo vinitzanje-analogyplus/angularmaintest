@@ -49,6 +49,15 @@ body {
   .sidenav a {font-size: 18px;}
 }
 </style>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 
 
 <div id="mySidenav" class="sidenav">
@@ -63,15 +72,7 @@ body {
 <p>Click on the element below to open the side navigation menu.</p>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-</script>
      
 
 
