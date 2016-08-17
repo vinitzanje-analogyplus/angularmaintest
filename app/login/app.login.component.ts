@@ -7,7 +7,7 @@ import { Router, ActivatedRoute }       from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  templateUrl: 'login_component.html',
+  templateUrl: 'app/login/login_component.html',
  
 
 })
