@@ -38,6 +38,11 @@ body {
     margin-left: 50px;
 }
 
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -52,7 +57,7 @@ body {
   <a href="#">Clients</a>
   <a href="#">Contact</a>
 </div>
-<div [style.marginLeft.px]="mySize">
+<div id="main" [style.marginLeft.px]="mySize">
 <span style="font-size:30px;cursor:pointer" (click)="open()">&#9776;Lawyer App</span>
      
 <router-outlet></router-outlet>
