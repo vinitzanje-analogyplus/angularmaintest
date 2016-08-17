@@ -33,16 +33,7 @@ export class AppLawyerProfileComponent {
    profileid:string;
    filetest:any;
 
-
-
-
-
-
-
   ngOnInit()    {
-
-         // console.log("profile.ts");
-
      if(localStorage.getItem('auth_token')==null)
          {
             this.router.navigate(['/login']);
@@ -50,10 +41,11 @@ export class AppLawyerProfileComponent {
          else{
        this.loggedin = localStorage.getItem('loggedinuser');
 
-          this.httpService.getUserDetail()
+       this.httpService.getUserDetail()
         .subscribe(
          data =>{ 
                         this.getData = data 
+                        console.log(this.getData)
                         if(this.getData[0].user_profile)
               {
                   this.firstname = this.getData[0].user_profile.firstname;
@@ -65,41 +57,18 @@ export class AppLawyerProfileComponent {
                         this.description = this.getData[0].user_profile.descireption;
                          this.aboutme = this.getData[0].user_profile.aboutme;
                           this.profileid = this.getData[0].user_profile.id;
-
-
-                        
-                      
-                    
-                  
-                
-              
             } 
                           
                 },
          error => alert(error),
          () => console.log()
          );
-
-
-
-
-
-
-
-
-
          }
-       
-        
-
-         
-
    }
 
 doTest()
 {
 console.log(this.filetest);
-
 }
 
 
