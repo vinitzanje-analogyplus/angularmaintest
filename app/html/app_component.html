@@ -50,12 +50,15 @@ body {
 </style>
 <div id="mySidenav" class="sidenav" [style.width.px]="mySize" >
   <a href="javascript:void(0)" class="closebtn" (click)="open()">&times;</a>
-
-  <a *ngIf="show" [routerLink]="['/login']">Login</a>
-  <a *ngIf="!show" [routerLink]="['/myprofile']">Profile</a>
-  <a [routerLink]="['/search']">Search</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+            <ul>
+            <li *ngIf="show"><a [routerLink]="['/login']" ><p class="sansserif">Login</p></a></li>
+            <li *ngIf="!show"> <a [routerLink]="['/myprofile']" ><p class="sansserif">Profile</p></a></li>
+            <li><a [routerLink]="['/search']" ><p class="sansserif">Search</p></a></li>
+            <li><a [routerLink]="['/about_me']" ><p class="sansserif">About Us</p></a></li>
+			<li><a [routerLink]="['/details']" ><p class="sansserif">Details</p></a></li>
+			<li><a [routerLink]="['/Contact']" ><p class="sansserif">Contact Us</p></a></li>
+		    <li><a [routerLink]="['/test']" ><p class="sansserif">Help</p></a></li>
+            </ul>
 </div>
 <div id="main" [style.marginLeft.px]="mySize">
 <span style="font-size:30px;cursor:pointer" (click)="open()">&#9776;Lawyer App</span>

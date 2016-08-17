@@ -5,6 +5,8 @@ import { FormsModule }    from '@angular/forms';
 import { AppComponent }   from './app.component';
 import { AppLoginComponent }   from './login/app.login.component';
 import { AppLawyerListComponent }   from './lawyerlist/app.lawyerlist.component';
+import { AppLawyerProfileComponent }   from './lawyerprofile/app.lawyerprofile.component';
+
 
 
 import { routing }        from './app.routing';
@@ -25,7 +27,8 @@ import { Httptest }  from './httpservice';
   declarations: [
     AppComponent,
     AppLoginComponent,
-    AppLawyerListComponent
+    AppLawyerListComponent,
+    AppLawyerProfileComponent
     
 
   ],

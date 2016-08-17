@@ -1,0 +1,157 @@
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<div class="container">
+    <h1>Edit Profile</h1>
+  	<hr>
+	<div class="row">
+      <!-- left column -->
+      <div class="col-md-3">
+        <div class="text-center">
+          <img  src="{{profileimage}}" >
+          <h6>Upload a different photo...</h6>
+          
+          <input type="file" (change)="changeListener($event)" class="form-control">
+        </div>
+      </div>
+                
+
+      
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        
+        <h3>Personal info</h3>
+        
+        <form class="form-horizontal" role="form">
+		<div class="form-group">
+            <label class="col-md-3 control-label">Username:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="text" value={{loggedin}} disabled/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">First name:</label>
+            <div class="col-lg-8">
+              <input [(ngModel)]="firstname" class="form-control" type="text" value="{{firstname}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Last name:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" [(ngModel)]="lastname" value="lastname">
+            </div>
+          </div>
+		    <div class="form-group">
+            <label class="col-lg-3 control-label">Email:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" [(ngModel)]="emailid" value="emailid">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Contact:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="number" [(ngModel)]="contactno" value="contactno">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Gender:</label>
+            <div class="col-lg-8">
+        <select class="form-control" id="gender1"  [ngModel]="state">
+        <option>Male</option>
+        <option>Female</option>
+        </select>          
+            </div>
+          </div>
+
+		  <div class="form-group dob" style="">
+            <label class="col-lg-3 control-label">Date of birth:</label>
+            <div class="col-lg-8">
+             <div class="form-group">
+           <input type="date"  value="{{dob}}" [(ngModel)]="dob" class="form-control dob" id="exampleInputDOB1" placeholder="Date of Birth">
+           </div>      
+            </div>
+          </div>
+		   <div class="form-group">
+            <label class="col-lg-3 control-label">State:</label>
+            <div class="col-lg-8">
+          <select #state class="form-control"  id="">
+		      <option>Select State</option> 
+				  <option>Quebec</option>
+				  <option>Northwest Territories</option>
+				  <option>Ontario</option>
+				  <option>Nunavut</option>
+				  <option>British Columbia</option>
+				 <option>Nova Scotia</option>
+        </select>          
+         </div>
+        </div>
+		<div #city class="form-group">
+            <label class="col-lg-3 control-label">City:</label>
+            <div class="col-lg-8">
+          <select class="form-control" id="">
+		      <option>Select City</option>
+				  <option>Ottawa</option>
+				  <option>Edmonton</option>
+				  <option>Victoria</option>
+				  <option>Winnipeg</option>
+				  <option>Fredericton</option>
+				  <option>Toronto</option>
+         	<option>Whitehorse</option>
+        </select>          
+         </div>
+        </div>
+		    <div class="form-group">
+            <label class="col-md-3 control-label">Address:</label>
+            <div class="col-md-8">
+			  <textarea class="form-control" rows="3" id="address" [(ngModel)]="address" value="address"></textarea>
+            </div>
+          </div>
+		  <div class="form-group">
+            <label class="col-md-3 control-label">Description:</label>
+            <div class="col-md-8">
+			  <textarea class="form-control" rows="5" id="descrp"  [(ngModel)]="description" value="description"></textarea>
+            </div>
+          </div>
+		   <div class="form-group">
+            <label class="col-md-3 control-label">About Me:</label>
+            <div class="col-md-8">
+			  <textarea class="form-control" rows="5" id="about-me" [(ngModel)]="aboutme" value="aboutme"></textarea>
+            </div>
+          </div>
+		  <div class="form-group">
+            <label class="col-lg-3 control-label">Attachment</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="file" value="">
+            </div>
+          </div>
+		  
+		
+		  
+		  
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+              <input type="button" (click)="doClick()" class="btn btn-primary" value="Save Changes">
+              <span></span>
+              <input type="button"  (click)="doTest()" class="btn btn-default" value="Cancel">
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
+<hr>
+
+<style>
+.dob{
+margin-bottom: 1px;
+margin-left: 25px;
+    width: 99%;
+}
+</style>

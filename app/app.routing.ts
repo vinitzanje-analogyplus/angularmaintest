@@ -2,7 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppLoginComponent } from 'app/login/app.login.component';
 import { AppLawyerListComponent } from 'app/lawyerlist/app.lawyerlist.component';
 //import { AppRegisterComponent } from './registration/app.register.component';
-//import { AppLawyerProfileComponent } from './lawyerprofile/app.lawyerprofile.component';
+import { AppLawyerProfileComponent } from 'app/lawyerprofile/app.lawyerprofile.component';
 //import { AppTestComponent } from './testcomponent/app.login.component';
 
 
@@ -29,10 +29,10 @@ const appRoutes: Routes = [
     component: AppLawyerListComponent
   },
   
-  // {
-  //   path: 'myprofile',
-  //   component: AppLawyerProfileComponent
-  // },
+   {
+     path: 'myprofile',
+     component: AppLawyerProfileComponent
+   },
 {
   path: '',
   redirectTo: '/search',
