@@ -7,13 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
  mySize:any=0;
-
- open()
- {
-   this.mySize=250
-   console.log(this.mySize);
-
- }
+open()
+  {
+    this.mySize=250
+    console.log(this.mySize);
+  }
 
 
 }
