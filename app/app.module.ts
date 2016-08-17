@@ -6,6 +6,7 @@ import { AppComponent }   from './app.component';
 import { AppLoginComponent }   from './login/app.login.component';
 
 import { routing }        from './app.routing';
+import { HttpModule }     from '@angular/http';
 
 
 
@@ -16,6 +17,7 @@ import { Httptest }  from './httpservice';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     routing
   ],
   declarations: [
