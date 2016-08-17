@@ -50,12 +50,9 @@ export class AppLawyerProfileComponent {
 
           this.httpService.getUserDetail()
         .subscribe(
-         data =>{       this.getData = data ;
-                        console.log(this.getData);
-                                    
-                },
+         data =>alert(data),
          error => alert(error),
-         () => console.log(this.getData)
+         () => console.log("Finished")
          );
 
 
