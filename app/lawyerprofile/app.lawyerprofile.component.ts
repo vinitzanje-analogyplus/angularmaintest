@@ -1,11 +1,16 @@
 import { Component,Input } from '@angular/core';
 
+import { NgFor } from '@angular/common';
+
 import { Httptest } from './../httpservice';
 import { Router, ActivatedRoute }       from '@angular/router';
+import { Http, Headers } from '@angular/http';
 @Component({
+
   selector: 'app-lawyerprofile',
   templateUrl: 'app/lawyerprofile/profile.html',
    styleUrls: ['app/lawyerprofile/app.component.css']
+
 })
 export class AppLawyerProfileComponent {
 
@@ -14,61 +19,91 @@ export class AppLawyerProfileComponent {
  
    constructor (private router: Router,private httpService: Httptest){
 
+    //   console.log("profile.ts");
    }
 
 //loggedin:string ;
-   profileimage:any="" ;
-   public getData="";
-   loggedin:string="";
-   firstname:any="";
-   lastname:any="";
-   emailid:any="";
-   contactno:any="";
-   dob:any="";
-   address:any="";
-   description:any="";
-   aboutme:any="";
-   profileid:string="";
-   filetest:any="";
+   profileimage:any ;
+   public getData;
+   loggedin:string;
+   firstname:any;
+   lastname:any;
+   emailid:any;
+   contactno:any;
+   dob:any;
+   address:any;
+   description:any;
+   aboutme:any;
+   profileid:string;
+   filetest:any;
+
+
+
+
+
+
 
   ngOnInit()    {
 
-    console.log("AppLawyerProfileComponent.ts");
-   
-     if(localStorage.getItem('auth_token'))
-        {
+         // console.log("profile.ts");
+
+     if(localStorage.getItem('auth_token')==null)
+         {
+            this.router.navigate(['/login']);
+         }
+         else{
        this.loggedin = localStorage.getItem('loggedinuser');
-       console.log("asda")
-       this.httpService.getUserDetail()
+
+          this.httpService.getUserDetail()
         .subscribe(
          data =>{ 
-
-           console.log("sdsds");
                         this.getData = data 
-                        console.log(this.getData) 
-            //             if(this.getData[0].user_profile)
-            //   {
-            //       this.firstname = this.getData[0].user_profile.firstname;
-            //        this.lastname = this.getData[0].user_profile.lastname;
-            //         this.emailid = this.getData[0].user_profile.emailid;
-            //          this.contactno = this.getData[0].user_profile.contactno;
-            //           this.dob = this.getData[0].user_profile.dob;
-            //            this.address = this.getData[0].user_profile.address;
-            //             this.description = this.getData[0].user_profile.descireption;
-            //              this.aboutme = this.getData[0].user_profile.aboutme;
-            //               this.profileid = this.getData[0].user_profile.id;
-            // } 
+                        if(this.getData[0].user_profile)
+              {
+                  this.firstname = this.getData[0].user_profile.firstname;
+                   this.lastname = this.getData[0].user_profile.lastname;
+                    this.emailid = this.getData[0].user_profile.emailid;
+                     this.contactno = this.getData[0].user_profile.contactno;
+                      this.dob = this.getData[0].user_profile.dob;
+                       this.address = this.getData[0].user_profile.address;
+                        this.description = this.getData[0].user_profile.descireption;
+                         this.aboutme = this.getData[0].user_profile.aboutme;
+                          this.profileid = this.getData[0].user_profile.id;
+
+
+                        
+                      
+                    
+                  
+                
+              
+            } 
                           
                 },
          error => alert(error),
          () => console.log()
          );
+
+
+
+
+
+
+
+
+
          }
+       
+        
+
+         
+
    }
 
 doTest()
 {
 console.log(this.filetest);
+
 }
 
 
