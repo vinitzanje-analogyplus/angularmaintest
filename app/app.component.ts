@@ -9,7 +9,14 @@ export class AppComponent {
  mySize:any=0;
 open()
   {
-    this.mySize=250
+    if(this.mySize==0)
+    {
+    this.mySize=250;
+    }
+    else
+    {
+      this.mySize=0;
+    }
     console.log(this.mySize);
   }
 

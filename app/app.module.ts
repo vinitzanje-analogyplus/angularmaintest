@@ -3,11 +3,14 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 
 import { AppComponent }   from './app.component';
+import { AppLoginComponent }   from './login/app.login.component';
+
 import { routing }        from './app.routing';
 
 
 
 import { HeroService }  from './heroservice';
+import { Httptest }  from './httpservice';
 
 @NgModule({
   imports: [
@@ -16,10 +19,13 @@ import { HeroService }  from './heroservice';
     routing
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    AppLoginComponent
+
   ],
   providers: [
-    HeroService
+    HeroService,
+    Httptest
   ],
   bootstrap: [ AppComponent ]
 })
