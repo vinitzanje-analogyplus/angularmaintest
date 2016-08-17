@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { Httptest } from './../httpservice';
+import { Router, ActivatedRoute }       from '@angular/router';
+
 
 
 
