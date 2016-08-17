@@ -48,13 +48,8 @@ export class AppLawyerProfileComponent {
 
        this.loggedin = localStorage.getItem('loggedinuser');
             console.log(this.loggedin);
-        //   this.httpService.getUserDetail()
-        // .subscribe(
-        //  data =>alert(data),
-        //  error => alert(error),
-        //  () => console.log("Finished")
-        //  );
-
+            this.getDatafrom();
+    
 
 
 
@@ -66,7 +61,13 @@ export class AppLawyerProfileComponent {
          }
        
         
-
+ getDatafrom() {
+    this.httpService
+        .getUserDetail()
+        .then(data => this.getData = data)
+        .catch(error =>this.getData = error);
+         console.log(this.getData)  
+ }
          
 
 

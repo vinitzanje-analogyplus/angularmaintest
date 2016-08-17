@@ -1,6 +1,7 @@
 import { Injectable }     from '@angular/core';
 import { Http }           from '@angular/http';
 import { Headers }           from '@angular/http';
+import 'rxjs/add/operator/toPromise';
 
 import 'rxjs/add/operator/map';
 
@@ -90,6 +91,24 @@ getUserDetail()
 
 
 }
+
+// getUserDetail()
+//  { 
+
+//     let headers = new Headers();
+//     headers.append('Content-Type', 'application/json');
+//     let authToken = localStorage.getItem('auth_token');
+
+//     this.username= localStorage.getItem('loggedinuser');
+//     headers.append('Authorization', `Token ${authToken}`);
+
+
+//         return this.http.get(this.userDetailUrl+this.username,{ headers })
+//                     .map(res => res.json());
+   
+
+
+// }
 
 
 
