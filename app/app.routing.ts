@@ -1,5 +1,5 @@
 import { Routes, RouterModule } from '@angular/router';
-import { AppLoginComponent } from './login/app.login.component';
+import { AppLoginComponent } from 'app/login/app.login.component';
 
 
 
