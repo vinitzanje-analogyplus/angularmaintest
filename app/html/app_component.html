@@ -46,8 +46,8 @@ body {
 <div id="mySidenav" class="sidenav" [style.width.px]="mySize" >
   <a href="javascript:void(0)" class="closebtn" (click)="open()">&times;</a>
 
-  <a *ngIf="show" [routerLink]="['/login']" ><p class="sansserif">Login</p></a></li>
-  <a *ngIf="!show" [routerLink]="['/myprofile']" ><p class="sansserif">Profile</p></a></li>
+  <a *ngIf="show" [routerLink]="['/login']" ><p class="sansserif">Login</p></a>
+  <a *ngIf="!show" [routerLink]="['/myprofile']" ><p class="sansserif">Profile</p></a>
   <a [routerLink]="['/login']">Login</a>
   <a [routerLink]="['/search']">Search</a>
   <a href="#">Clients</a>
