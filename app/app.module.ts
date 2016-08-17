@@ -11,7 +11,6 @@ import { AppLawyerProfileComponent }   from './lawyerprofile/app.lawyerprofile.c
 
 import { routing }        from './app.routing';
 import { HttpModule }     from '@angular/http';
-import { Headers }     from '@angular/http';
 
 
 
@@ -24,7 +23,6 @@ import { Httptest }  from './httpservice';
     BrowserModule,
     FormsModule,
     HttpModule,
-    Headers,
     routing
   ],
   declarations: [
