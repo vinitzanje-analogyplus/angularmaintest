@@ -2,7 +2,6 @@ import { Component,Input } from '@angular/core';
 
 import { Httptest } from './../httpservice';
 import { Router, ActivatedRoute }       from '@angular/router';
-import { Http, Headers } from '@angular/http';
 @Component({
   selector: 'app-lawyerprofile',
   templateUrl: 'app/lawyerprofile/profile.html',
@@ -15,7 +14,6 @@ export class AppLawyerProfileComponent {
  
    constructor (private router: Router,private httpService: Httptest){
 
-    //   console.log("profile.ts");
    }
 
 //loggedin:string ;
