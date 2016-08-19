@@ -79,17 +79,11 @@ import 'rxjs/add/operator/map';
   
   
   getUserDetail() {
-    // let headers = new Headers();
-    // //te headerss.append('Content-Type', 'application/json');
-     let authToken = localStorage.getItem('auth_token');
-    // this.username = localStorage.getItem('loggedinuser');
-    // headers.append('Authorization', 'Token ' + authToken);
-
-    let headers = new Headers({
-     
-      'Authorization': 'Token ' + authToken
-    });
-
+    let headers = new Headers();
+    //te headerss.append('Content-Type', 'application/json');
+    let authToken = localStorage.getItem('auth_token');
+    this.username = localStorage.getItem('loggedinuser');
+    headers.append('Authorization', 'Token ' + authToken);
     return this.http.get(this.userDetailUrl + this.username, {
       headers: headers
     }).map(res => res.json());
