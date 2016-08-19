@@ -27,7 +27,17 @@
         <div class="form-group">
         <label>Gender:</label>
         <div>
-            <select>
+            <select   class="form-control" id="gender"
+        required
+        [(ngModel)]="model.gender" name="gender" 
+        placeholder="username"
+        #gender="ngModel"
+         />
+    
+         <div [hidden]="gender.valid || gender.pristine" 
+             class="alert alert-danger">
+          Gender is required
+        </div>
         <option>Male</option>
         <option>Female</option>
         </select>
