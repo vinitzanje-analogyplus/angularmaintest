@@ -57,13 +57,13 @@ export class AppLawyerProfileComponent {
         
  getDatafrom() {
     this.httpService
-        .getUserDetail()
-        .subscribe(
-         data => this.getData = data.stringify() ,
-         error => alert(error),
-         () => console.log("finish")
-         );
-         console.log(this.getData);
+        .getUserDetail();
+        // .subscribe(
+        //  data => this.getData = data.stringify() ,
+        //  error => alert(error),
+        //  () => console.log("finish")
+        //  );
+        //  console.log(this.getData);
 
  }
          

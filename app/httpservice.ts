@@ -17,6 +17,8 @@ export class Httptest {
   private userDetailUrl = 'http://vinitdjango.analogyplus.com/users/?username=';
   key: string;
   username: string;
+  datat:string;
+  datae:string;
   getUsers() {
     return this.http.get(this.usersUrl)
       .map(res => res.json());
@@ -87,11 +89,16 @@ export class Httptest {
     this.username = localStorage.getItem('loggedinuser');
     headers.append('Authorization', `Token ${authToken}`);
 
-      console.log(authToken+" "+this.username+" "+headers);
+    //  console.log(authToken+" "+this.username+" "+headers);
 
-    return this.http.get(this.userDetailUrl+this.username,{ headers: headers })
-     .map(res => res.json());
-    
+    this.http.get(this.userDetailUrl+this.username, {
+  headers
+  })
+  .subscribe(
+    data => this.datat = data.text(),
+    err => console.log(err.text()),
+    () => console.log(this.datat)
+  );
 
 
 
