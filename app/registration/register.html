@@ -47,7 +47,7 @@
                 #gender="ngModel" >
           <option *ngFor="let p of genders" [value]="p">{{p}}</option>
         </select>
-        <div [hidden]="power.valid || power.pristine" class="alert alert-danger">
+        <div [hidden]="gender.valid || gender.pristine" class="alert alert-danger">
           Gender is required
         </div>
       </div>
