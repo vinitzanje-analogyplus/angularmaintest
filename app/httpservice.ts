@@ -1,7 +1,8 @@
 import { Injectable }     from '@angular/core';
 
 import { Http, Response } from '@angular/http';
-import { Headers }           from '@angular/http';
+
+import { Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import 'rxjs/add/operator/map';
@@ -89,9 +90,14 @@ export class Httptest {
     this.username = localStorage.getItem('loggedinuser');
     headers.append('Authorization', `Token ${authToken}`);
 
+
+
+    let options = new RequestOptions({ headers: headers });
+
+
     //  console.log(authToken+" "+this.username+" "+headers);
     console.log(headers);
-    this.http.get(this.userDetailUrl+this.username)
+    this.http.get(this.userDetailUrl+this.username,options)
     .subscribe(
     data => this.datat = data.text(),
     err => console.log(err.text()),
