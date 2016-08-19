@@ -112,7 +112,7 @@ doClick()
  
     this.httpService.doProfilePost(body,this.profileid)
         .subscribe(
-         data => this.getData = data,
+         data => this.getData = data.stringify(),
          error => alert(error),
          () => console.log(this.getData)
          );
