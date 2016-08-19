@@ -30,7 +30,10 @@ active=true;
   dataj: JSON;
   genders = ['Male','Female'];
 
-    model = new Regmodel(0,"","","","");
+  public model;
+
+
+  //  model = new Regmodel(0,"","","","");
 
   constructor(private router: Router, private httpService: Httptest) { }
 
