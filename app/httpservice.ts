@@ -87,10 +87,10 @@ getUserDetail()
     this.username= localStorage.getItem('loggedinuser');
     headers.append('Authorization', `Token ${authToken}`);
 
-    return this.http.get(this.userDetailUrl+this.username,{ headers })
-    .map(this.extractData);
-    // return this.http.get("http://ip.jsontest.com/")
+    // return this.http.get(this.userDetailUrl+this.username,{ headers })
     // .map(this.extractData);
+    return this.http.get("http://ip.jsontest.com/")
+    .map(this.extractData);
 
     
       
