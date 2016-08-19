@@ -78,15 +78,15 @@ export class Httptest {
   }
 
   getUserDetail() {
-      let headers = new Headers();
-      headers.append('Content-Type', 'application/json');
+      let headerss = new Headers();
+      headerss.append('Content-Type', 'application/json');
       let authToken = localStorage.getItem('auth_token');
 
       this.username= localStorage.getItem('loggedinuser');
-      headers.append('Authorization', 'Token '+authToken);
+      headerss.append('Authorization', 'Token '+authToken);
 
 
-          return this.http.get(this.userDetailUrl+this.username,{ headers:headers })
+          return this.http.get(this.userDetailUrl+this.username,{ headers:headerss })
                       .map(res => res.json());
 
 
