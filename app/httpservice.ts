@@ -89,8 +89,10 @@ getUserDetail()
 
     // return this.http.get(this.userDetailUrl+this.username,{ headers })
     // .map(this.extractData);
-    return this.http.get("http://ip.jsontest.com/")
+    dataofget = this.http.get("http://ip.jsontest.com/")
     .map(this.extractData);
+
+    console.log(dataofget);
 
     
       
