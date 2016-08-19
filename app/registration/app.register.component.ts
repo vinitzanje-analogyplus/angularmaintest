@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { Router, ActivatedRoute }       from '@angular/router';
 
 import { Httptest } from './../httpservice';
+import { Regmodel }    from './regmodel';
 
 
 import { Http, Headers } from '@angular/http';
@@ -27,6 +28,8 @@ export class AppRegisterComponent {
 
 
   dataj: JSON;
+
+    model = new Regmodel(0,"","","");
 
   constructor(private router: Router, private httpService: Httptest) { }
 
