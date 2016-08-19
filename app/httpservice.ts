@@ -90,15 +90,20 @@ export class Httptest {
     headers.append('Authorization', `Token ${authToken}`);
 
     //  console.log(authToken+" "+this.username+" "+headers);
-
-    this.http.get(this.userDetailUrl+this.username, {
-  headers
-  })
-  .subscribe(
+    this.http.get("https://jsonplaceholder.typicode.com/posts")
+    .subscribe(
     data => this.datat = data.text(),
     err => console.log(err.text()),
     () => console.log(this.datat)
   );
+  //   this.http.get(this.userDetailUrl+this.username, {
+  // headers
+  // })
+  // .subscribe(
+  //   data => this.datat = data.text(),
+  //   err => console.log(err.text()),
+  //   () => console.log(this.datat)
+  // );
 
 
 
