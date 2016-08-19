@@ -88,7 +88,7 @@ getUserDetail()
     headers.append('Authorization', `Token ${authToken}`);
 
     return this.http.get(this.userDetailUrl+this.username,{ headers })
-    .map(res => res.json());
+    .map(this.extractData);
     // return this.http.get("http://ip.jsontest.com/")
     // .map(this.extractData);
 
