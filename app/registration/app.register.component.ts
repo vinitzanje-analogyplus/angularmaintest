@@ -34,6 +34,11 @@ active=true;
 
   constructor(private router: Router, private httpService: Httptest) { }
 
+  doTest()
+  {
+    console.log(this.model);
+  }
+
   Register(username: string, email: string, pass1: string, pass2: string) {
     console.log("register.ts");
 
