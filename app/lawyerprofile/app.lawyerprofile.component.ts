@@ -61,8 +61,9 @@ export class AppLawyerProfileComponent {
         .subscribe(
          data => this.getData = data.stringify() ,
          error => alert(error),
-         () => console.log(this.getData)
+         () => console.log("finish")
          );
+         console.log(this.getData);
 
  }
          
