@@ -25,7 +25,7 @@ export class AppRegisterComponent {
 
   error: string;
     name: string;
-
+active=true;
 
   dataj: JSON;
   genders = ['Male','Female'];
