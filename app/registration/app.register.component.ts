@@ -30,7 +30,7 @@ export class AppRegisterComponent {
   dataj: JSON;
   gender = ['Male','Female'];
 
-    model = new Regmodel(0,"","","");
+    model = new Regmodel(0,"","",this.gender[0]);
 
   constructor(private router: Router, private httpService: Httptest) { }
 
