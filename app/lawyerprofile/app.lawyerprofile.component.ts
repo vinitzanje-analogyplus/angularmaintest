@@ -56,15 +56,8 @@ export class AppLawyerProfileComponent {
         
  getDatafrom() {
     this.httpService
-        .getUserDetail()
-        .subscribe(
-          data => this.getData = data,
-         error => alert(error),
-         () => console.log(this.getData)
-        
-        )
-        
-         console.log(this.getData)  
+        .getUserDetail();
+         console.log(this.getData) ; 
  }
          
 
