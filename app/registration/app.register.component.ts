@@ -23,6 +23,8 @@ export class AppRegisterComponent {
   public getData;
 
   error: string;
+    name: string;
+
 
   dataj: JSON;
 
