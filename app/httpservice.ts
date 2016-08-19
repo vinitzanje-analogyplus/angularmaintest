@@ -94,6 +94,8 @@ getUserDetail()
 
     console.log(dataofget);
 
+    return dataofget;
+
     
       
      
