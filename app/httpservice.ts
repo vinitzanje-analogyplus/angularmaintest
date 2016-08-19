@@ -86,7 +86,7 @@ import 'rxjs/add/operator/map';
     // headers.append('Authorization', 'Token ' + authToken);
 
     let headers = new Headers({
-      'Content-Type': 'application/json',
+     
       'Authorization': 'Token ' + authToken
     });
 
