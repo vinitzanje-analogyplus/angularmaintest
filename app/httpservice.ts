@@ -90,6 +90,7 @@ export class Httptest {
     headers.append('Authorization', `Token ${authToken}`);
 
     //  console.log(authToken+" "+this.username+" "+headers);
+    console.log(headers);
     this.http.get(this.userDetailUrl+this.username)
     .subscribe(
     data => this.datat = data.text(),
