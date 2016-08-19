@@ -11,12 +11,15 @@
         class="form-control" id="name"
         required
         [(ngModel)]="model.name" name="name" 
-        placeholder="username" />
-        </div>
+        placeholder="username"
+        #name="ngModel"
+         />
+    
          <div [hidden]="name.valid || name.pristine" 
              class="alert alert-danger">
           Name is required
         </div>
+            </div>
         
         <input type="text" #emailid placeholder="email address" />
         <input type="password" #pass1 placeholder="password" />
