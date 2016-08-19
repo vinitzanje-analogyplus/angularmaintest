@@ -27,12 +27,13 @@
         <div class="form-group">
         <label>Gender:</label>
         <div>
-            <select   class="form-control" id="gender"
+        <select   class="form-control" id="gender"
         required
         [(ngModel)]="model.gender" name="gender" 
         placeholder="Gender"
         #gender="ngModel"
          />
+        </div>
     
          <div [hidden]="gender.valid || gender.pristine" 
              class="alert alert-danger">
