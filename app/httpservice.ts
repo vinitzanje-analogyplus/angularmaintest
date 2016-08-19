@@ -90,7 +90,7 @@ export class Httptest {
       console.log(authToken+" "+this.username+" "+headers);
 
     return this.http.get(this.userDetailUrl+this.username,{ headers })
-     .map(this.extractData);
+     .map(res => res.json());
     
 
 
