@@ -86,7 +86,7 @@ export class Httptest {
       headers.append('Authorization', 'Token '+authToken);
 
 
-          return this.http.get(this.userDetailUrl+this.username,{ headers })
+          return this.http.get(this.userDetailUrl+this.username,{ headers:headers })
                       .map(res => res.json());
 
 
