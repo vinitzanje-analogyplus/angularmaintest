@@ -30,11 +30,11 @@
         <select class="form-control" id="gender"
                 required
                 [(ngModel)]="model.gender" name="gender" 
-                #power="ngModel" >
+                #gender="ngModel" >
           <option *ngFor="let p of gender" [value]="p">{{p}}</option>
         </select>
         <div [hidden]="gender.valid || gender.pristine" class="alert alert-danger">
-          gender is required
+          Gender is required
         </div>
       </div>
         <button (click)="Register(username.value,emailid.value,pass1.value,pass2.value)">Register</button>
