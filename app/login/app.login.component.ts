@@ -10,88 +10,85 @@ import { Router, ActivatedRoute }       from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: 'app/login/login_component.html',
- 
+
 
 })
-export class AppLoginComponent   {
+export class AppLoginComponent {
 
-//getData: Object[] ;
+  //getData: Object[] ;
 
-public getData;
-public LoggedinUserInfo:string;
-public key:string;
-
-
+  public getData;
+  public LoggedinUserInfo: string;
+  public key: string;
 
 
-  
-  constructor (  private router: Router,private httpService: Httptest){
 
-              console.log(localStorage.getItem('auth_token'));
+
+
+  constructor(private router: Router, private httpService: Httptest) {
+
+    console.log(localStorage.getItem('auth_token'));
 
   }
 
 
-   ngOnInit()    {
+  ngOnInit() {
 
-          console.log("login.ts");
-
-
-
-this.key =    localStorage.getItem('auth_token');  
-
-     
-
-     if(this.key!=null)
-         {
-            this.router.navigate(['/myprofile']);
-         }
-         else
-         {
-            this.router.navigate(['/login']);
-
-         }
-
-
-         
-
-   }
+    console.log("login.ts");
 
 
 
- doLogin(username: string,pass: string) {
-   console.log(username+" "+pass); 
-     this.httpService.doLogin(username,pass)
-         .subscribe(
-        	data => { 
-            
-            this.getData = data
-            
-          if (this.getData.key!=null) {
-          localStorage.setItem('auth_token',this.getData.key);
+    this.key = localStorage.getItem('auth_token');
+
+
+
+    if (this.key != null) {
+      this.router.navigate(['/myprofile']);
+    }
+    else {
+      this.router.navigate(['/login']);
+
+    }
+
+
+
+
+  }
+
+
+
+  doLogin(username: string, pass: string) {
+    console.log(username + " " + pass);
+    this.httpService.doLogin(username, pass)
+      .subscribe(
+      data => {
+
+        this.getData = data
+
+        if (this.getData.key != null) {
+          localStorage.setItem('auth_token', this.getData.key);
           console.log(localStorage.getItem('auth_token'));
-         localStorage.setItem('loggedinuser',username);  
-                   this.router.navigate(['/myprofile']);
+          localStorage.setItem('loggedinuser', username);
+          this.router.navigate(['/myprofile']);
 
         }
-        
-      
-    
-           }, 
-         	error => alert(error),
-         () => console.log("finished")
-         );
 
-          
-          
-         
-        }
 
-        goToRegistrationPage()
-        {
-                             this.router.navigate(['/registration']);
 
-        }
+      },
+      error => alert(error),
+      () => console.log("finished")
+      );
+
+
+
+
+  }
+
+  goToRegistrationPage() {
+    this.router.navigate(['/registration']);
+
+  }
 
 }
 

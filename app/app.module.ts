@@ -6,6 +6,8 @@ import { AppComponent }   from './app.component';
 import { AppLoginComponent }   from './login/app.login.component';
 import { AppLawyerListComponent }   from './lawyerlist/app.lawyerlist.component';
 import { AppLawyerProfileComponent }   from './lawyerprofile/app.lawyerprofile.component';
+import { AppRegisterComponent }   from './registration/app.register.component';
+
 
 
 
@@ -29,7 +31,8 @@ import { Httptest }  from './httpservice';
     AppComponent,
     AppLoginComponent,
     AppLawyerListComponent,
-    AppLawyerProfileComponent
+    AppLawyerProfileComponent,
+    AppRegisterComponent
     
 
   ],

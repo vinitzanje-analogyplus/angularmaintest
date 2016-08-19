@@ -1,0 +1,14 @@
+<md-card align="center">
+<md-card-title>Create Your Account </md-card-title>
+<md-card-content align="center">
+<form >
+      Username        :<input type="text"   #username  placeholder="Username" ><br>
+      Email           :<input type="text"   #emailid  placeholder="Username" ><br>
+      Password        :<input type="password"   #pass1 placeholder="Password" ><br>
+      Retype Password :<input type="password"  #pass2   placeholder="Retype Password" ><br>
+</form>
+</md-card-content>
+<md-card-actions align="center">
+<button md-raised-button color="accent" (click)="Register(username.value,emailid.value,pass1.value,pass2.value)">Register</button>
+</md-card-actions>
+</md-card>

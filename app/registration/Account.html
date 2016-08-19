@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style type="text/css">
+        .header {
+            border-bottom: 1px solid lightgray;
+            font: 20px Arial;
+            height: 30px;
+        }
+
+        .label {
+            font: 14px Arial;
+        }
+
+        .button {
+            background-color: #487DB3; /* #0A83AA;*/
+            color: #FFFFFF;
+            padding: 4px 7px 4px 7px;
+            -webkit-border-radius: 5px;
+            border-spacing: 5px;
+            border: 1px solid #487DB3;
+            width: 60px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .form-sec-body {
+            margin: 10px;
+        }
+
+            .form-sec-body table td {
+                padding: 4px;
+            }
+    </style>
+    <title></title>
+</head>
+<body>
+<md-card align="center">
+<md-card-title>Create Your Account </md-card-title>
+<md-card-content align="center">
+        <div class="form-sec-body" align="center">
+            <table align="center">
+                <colgroup>
+                    <col style="width: 25%" />
+                </colgroup>
+                <tr>
+                    <td class="label">User Name :</td>
+                    <td>
+                        <input  #username type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Email :</td>
+                    <td>
+                        <input #email type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Password :</td>
+                    <td>
+                        <input #pass1 type="password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Retype Password :</td>
+                    <td>
+                        <input #pass2 type="password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br />
+                        <input type="button" value="Register" (click)="Register(username.value,emailid.value,pass1.value,pass2.value)" class="button" style="width: 90px" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+</md-card-content>
+    </md-card>
+
+</body>
+</html>
