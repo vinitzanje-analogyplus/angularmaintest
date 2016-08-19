@@ -1,12 +1,5 @@
 
 
-<style>
-.dob{
-margin-bottom: 1px;
-margin-left: 25px;
-    width: 99%;
-}
-</style>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,13 +8,13 @@ margin-left: 25px;
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <div class="container">
-    <h1>{{loggedin}}</h1>
+    <h1>Edit Profile</h1>
   	<hr>
 	<div class="row">
       <!-- left column -->
       <div class="col-md-3">
         <div class="text-center">
-          <img  src="xxx" >
+          <img  src="{{profileimage}}" >
           <h6>Upload a different photo...</h6>
           
           <input type="file" (change)="changeListener($event)" class="form-control">
@@ -155,3 +148,10 @@ margin-left: 25px;
 </div>
 <hr>
 
+<style>
+.dob{
+margin-bottom: 1px;
+margin-left: 25px;
+    width: 99%;
+}
+</style>
