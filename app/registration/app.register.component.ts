@@ -30,7 +30,7 @@ active=true;
   dataj: JSON;
   genders = ['Male','Female'];
 
-  public model;
+  public model:any;
 
 
   //  model = new Regmodel(0,"","","","");
