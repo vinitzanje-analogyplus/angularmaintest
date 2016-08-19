@@ -88,7 +88,7 @@ getUserDetail()
     headers.append('Authorization', `Token ${authToken}`);
 
 
-    dataofget = this.http.get(this.userDetailUrl+this.username,{ headers })
+    return this.http.get(this.userDetailUrl+this.username,{ headers })
     .map(this.extractData);
 
     
