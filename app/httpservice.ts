@@ -1,5 +1,6 @@
 import { Injectable }     from '@angular/core';
-import { Http }           from '@angular/http';
+
+import { Http, Response } from '@angular/http';
 import { Headers }           from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
@@ -87,13 +88,19 @@ getUserDetail()
     headers.append('Authorization', `Token ${authToken}`);
 
 
-    console.log(this.http.get(this.userDetailUrl+this.username,{ headers })
-    .map(response => response.json()));
+    dataofget = this.http.get(this.userDetailUrl+this.username,{ headers })
+    .map(this.extractData);
+
     
       
      
 
 }
+private extractData(res: Response) {
+    let body = res.json();
+    console.log(body);
+    return body.data || { };
+  }
 
 // getUserDetail()
 //  { 
