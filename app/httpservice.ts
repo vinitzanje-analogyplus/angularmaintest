@@ -82,14 +82,16 @@ export class Httptest {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     let authToken = localStorage.getItem('auth_token');
+  
 
     this.username = localStorage.getItem('loggedinuser');
     headers.append('Authorization', `Token ${authToken}`);
 
-    // return this.http.get(this.userDetailUrl+this.username,{ headers })
-    // .map(this.extractData);
-    return this.http.get("http://ip.jsontest.com/")
-      .map(res => res.json());
+      console.log(authToken+" "+this.username+" "+headers);
+
+    return this.http.get(this.userDetailUrl+this.username,{ headers })
+     .map(this.extractData);
+    
 
 
 
