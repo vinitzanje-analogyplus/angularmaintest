@@ -25,6 +25,7 @@ export class AppLawyerProfileComponent {
 //loggedin:string ;
    profileimage:any ;
    public getData;
+   heroes:any;
    loggedin:string;
    firstname:any;
    lastname:any;
@@ -56,8 +57,11 @@ export class AppLawyerProfileComponent {
         
  getDatafrom() {
     this.httpService
-        .getUserDetail();
-         console.log(this.getData) ; 
+        .getUserDetail()
+        .subscribe(
+                       heroes => this.heroes = heroes,
+                       error =>  this.filetest = <any>error);
+         console.log(this.heroes) ; 
  }
          
 

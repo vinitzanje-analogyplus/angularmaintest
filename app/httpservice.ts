@@ -87,10 +87,19 @@ getUserDetail()
     headers.append('Authorization', `Token ${authToken}`);
 
 
+    return this.http.get(this.userDetailUrl+this.username,{ headers })
+      .map(response => response.json())
+      
+      ;
+
+
         dataofget = this.http.get(this.userDetailUrl+this.username,{ headers })
-                    .map(res => res.json());
-                    console.log(dataofget);
-   
+                    .map(res => res.json())
+                    .subscribe(
+                       response => this.storeToken(response.id_token),
+      this.logError,
+      () => console.log('Authentication Complete')
+    );
 
 
 }
