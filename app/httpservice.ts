@@ -96,7 +96,7 @@ export class Httptest {
 
 
     //  console.log(authToken+" "+this.username+" "+headers);
-    console.log(headers);
+    console.log(options);
     this.http.get(this.userDetailUrl+this.username,options)
     .subscribe(
     data => this.datat = data.text(),
