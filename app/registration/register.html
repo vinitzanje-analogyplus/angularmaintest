@@ -31,7 +31,7 @@
                 required
                 [(ngModel)]="model.gender" name="gender" 
                 #gender="ngModel" >
-          <option *ngFor="let p of gender" [value]="p">{{p}}</option>
+          <option *ngFor="let p of genders" [value]="p">{{p}}</option>
         </select>
         <div [hidden]="gender.valid || gender.pristine" class="alert alert-danger">
           Gender is required
