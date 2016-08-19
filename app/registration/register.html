@@ -7,7 +7,7 @@
         <input type="text" class="form-control" id="username"
                required
                [(ngModel)]="model.username" name="username"
-               #name="ngModel" >
+               #username="ngModel" >
         <div [hidden]="username.valid || username.pristine" 
              class="alert alert-danger">
           Username is required
