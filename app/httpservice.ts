@@ -79,7 +79,7 @@ export class Httptest {
 
   getUserDetail() {
       let headerss = new Headers();
-      headerss.append('Content-Type', 'application/json');
+     // headerss.append('Content-Type', 'application/json');
       let authToken = localStorage.getItem('auth_token');
 
       this.username= localStorage.getItem('loggedinuser');
