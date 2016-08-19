@@ -25,25 +25,18 @@
         <input type="password" #pass1 placeholder="password" />
         <input type="password" #pass2 placeholder="retype password" />
         <div class="form-group">
-        <label>Gender:</label>
-        <div>
-        <select   class="form-control" id="gender"
-        required
-        [(ngModel)]="model.gender" name="gender" 
-        placeholder="Gender"
-        #gender="ngModel"
-         />
-        </div>
-    
-         <div [hidden]="gender.valid || gender.pristine" 
-             class="alert alert-danger">
-          Gender is required
-        </div>
-        <option>Male</option>
-        <option>Female</option>
+   <div class="form-group">
+        <label for="power">Gender</label>
+        <select class="form-control" id="gender"
+                required
+                [(ngModel)]="model.gender" name="gender" 
+                #power="ngModel" >
+          <option *ngFor="let p of gender" [value]="p">{{p}}</option>
         </select>
-          </div>
+        <div [hidden]="gender.valid || gender.pristine" class="alert alert-danger">
+          gender is required
         </div>
+      </div>
         <button (click)="Register(username.value,emailid.value,pass1.value,pass2.value)">Register</button>
 
       </form>

@@ -28,6 +28,7 @@ export class AppRegisterComponent {
 
 
   dataj: JSON;
+  gender = ['Male','Female'];
 
     model = new Regmodel(0,"","","");
 
