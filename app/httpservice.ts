@@ -78,31 +78,19 @@ export class Httptest {
   }
 
   getUserDetail() {
-    let dataofget: JSON;
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      let authToken = localStorage.getItem('auth_token');
 
-    console.log("getUserDetail");
-
-    let headerss = new Headers();
-   // headers.append('Content-Type', 'application/json');
-    let authToken = localStorage.getItem('auth_token');
-  
-
-    this.username = localStorage.getItem('loggedinuser');
-    headerss.append('Authorization','Token ' + authToken);
+      this.username= localStorage.getItem('loggedinuser');
+      headers.append('Authorization', 'Token '+authToken);
 
 
+          return this.http.get(this.userDetailUrl+this.username,{ headers })
+                      .map(res => res.json());
 
-    let options = new RequestOptions({ headers: headerss });
 
-
-    //  console.log(authToken+" "+this.username+" "+headers);
-    console.log(options);
-    this.http.get(this.userDetailUrl+this.username,{ headers: headerss})
-    .subscribe(
-    data => this.datat = data.text(),
-    err => console.log(err.text()),
-    () => console.log(this.datat)
-  );
+ 
   //   this.http.get(this.userDetailUrl+this.username, {
   // headers
   // })
