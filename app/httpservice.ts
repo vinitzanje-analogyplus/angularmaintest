@@ -75,7 +75,7 @@ export class Httptest {
   }
 
 getUserDetail()
- {  let dataofget:any;
+ {  let dataofget:JSON;
 
    console.log("getUserDetail");
 
@@ -87,20 +87,10 @@ getUserDetail()
     headers.append('Authorization', `Token ${authToken}`);
 
 
-    return this.http.get(this.userDetailUrl+this.username,{ headers })
-      .map(response => response.json())
+    dataofget = this.http.get(this.userDetailUrl+this.username,{ headers })
+    .map(response => response.json())
       
-      ;
-
-
-        dataofget = this.http.get(this.userDetailUrl+this.username,{ headers })
-                    .map(res => res.json())
-                    .subscribe(
-                       response => this.storeToken(response.id_token),
-      this.logError,
-      () => console.log('Authentication Complete')
-    );
-
+     
 
 }
 

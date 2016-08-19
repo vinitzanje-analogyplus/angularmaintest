@@ -58,10 +58,10 @@ export class AppLawyerProfileComponent {
  getDatafrom() {
     this.httpService
         .getUserDetail()
-        .subscribe(
-                       heroes => this.heroes = heroes,
-                       error =>  this.filetest = <any>error);
-         console.log(this.heroes) ; 
+        // .subscribe(
+        //                heroes => this.heroes = heroes,
+        //                error =>  this.filetest = <any>error);
+        //  console.log(this.heroes) ; 
  }
          
 
