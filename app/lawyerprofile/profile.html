@@ -38,25 +38,25 @@
           <div class="form-group">
             <label class="col-lg-3 control-label">First name:</label>
             <div class="col-lg-8">
-              <input [(ngModel)]="firstname" class="form-control" type="text" value="{{firstname}}">
+              <input [(ngModel)]="firstname" class="form-control" type="text" value="{{firstname}}" [ngModelOptions]="{standalone: true}">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Last name:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" [(ngModel)]="lastname" value="lastname">
+              <input class="form-control" type="text" [(ngModel)]="lastname" value="lastname" [ngModelOptions]="{standalone: true}">
             </div>
           </div>
 		    <div class="form-group">
             <label class="col-lg-3 control-label">Email:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" [(ngModel)]="emailid" value="emailid">
+              <input class="form-control" type="text" [(ngModel)]="emailid" value="emailid" [ngModelOptions]="{standalone: true}">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Contact:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="number" [(ngModel)]="contactno" value="contactno">
+              <input class="form-control" type="number" [(ngModel)]="contactno" value="contactno" [ngModelOptions]="{standalone: true}">
             </div>
           </div>
           <div class="form-group">
@@ -73,7 +73,7 @@
             <label class="col-lg-3 control-label">Date of birth:</label>
             <div class="col-lg-8">
              <div class="form-group">
-           <input type="date"  value="{{dob}}" [(ngModel)]="dob" class="form-control dob" id="exampleInputDOB1" placeholder="Date of Birth">
+           <input type="date"  value="{{dob}}" [(ngModel)]="dob" class="form-control dob" id="exampleInputDOB1" placeholder="Date of Birth" [ngModelOptions]="{standalone: true}">
            </div>      
             </div>
           </div>
@@ -109,19 +109,19 @@
 		    <div class="form-group">
             <label class="col-md-3 control-label">Address:</label>
             <div class="col-md-8">
-			  <textarea class="form-control" rows="3" id="address" [(ngModel)]="address" value="address"></textarea>
+			  <textarea class="form-control" rows="3" id="address" [(ngModel)]="address" value="address" [ngModelOptions]="{standalone: true}"></textarea>
             </div>
           </div>
 		  <div class="form-group">
             <label class="col-md-3 control-label">Description:</label>
             <div class="col-md-8">
-			  <textarea class="form-control" rows="5" id="descrp"  [(ngModel)]="description" value="description"></textarea>
+			  <textarea class="form-control" rows="5" id="descrp"  [(ngModel)]="description" value="description" [ngModelOptions]="{standalone: true}"></textarea>
             </div>
           </div>
 		   <div class="form-group">
             <label class="col-md-3 control-label">About Me:</label>
             <div class="col-md-8">
-			  <textarea class="form-control" rows="5" id="about-me" [(ngModel)]="aboutme" value="aboutme"></textarea>
+			  <textarea class="form-control" rows="5" id="about-me" [(ngModel)]="aboutme" value="aboutme" [ngModelOptions]="{standalone: true}"></textarea>
             </div>
           </div>
 		  <div class="form-group">
