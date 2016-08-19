@@ -89,7 +89,7 @@ export class Httptest {
     // return this.http.get(this.userDetailUrl+this.username,{ headers })
     // .map(this.extractData);
     return this.http.get("http://ip.jsontest.com/")
-      .map(this.extractData);
+      .map(res => res.json());
 
 
 
