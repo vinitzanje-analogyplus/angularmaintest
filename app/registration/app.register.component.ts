@@ -47,7 +47,7 @@ console.log(heroForm);
 
 changelistner(data:any)
 {
-  console.log(data);
+  console.log(data.value.username);
 }
 
   Register(m:Regmodel) {
