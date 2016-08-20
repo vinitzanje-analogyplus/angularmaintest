@@ -6,9 +6,9 @@
         <label for="username">Username</label>
         <input type="text" class="form-control" id="username"
                required
-                (change)="changelistner(username)"
+              
                [(ngModel)]="model.username" name="username"
-               #username="ngModel" >
+               #username="ngModel"   (change)="changelistner($event)">
         <div [hidden]="username.valid || username.pristine" 
              class="alert alert-danger">
           Username is required
