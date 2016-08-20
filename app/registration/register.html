@@ -1,7 +1,7 @@
 <div class="container">
   <div  [hidden]="submitted">
     <h1>Register</h1>
-    <form *ngIf="active" (ngSubmit)="doTest(heroForm)"  #heroForm="ngForm"   (change)="changelistner(heroForm)">
+    <form *ngIf="active" (ngSubmit)="doTest(heroForm)"  #heroForm="ngForm"   (onChange)="changelistner(heroForm)">
       <div class="form-group">
         <label for="username">Username</label>
         <input type="text" class="form-control" id="username"
