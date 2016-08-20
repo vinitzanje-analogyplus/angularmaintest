@@ -6,6 +6,7 @@
         <label for="username">Username</label>
         <input type="text" class="form-control" id="username"
                required
+                (change)="changelistner(username)"
                [(ngModel)]="model.username" name="username"
                #username="ngModel" >
         <div [hidden]="username.valid || username.pristine" 
@@ -17,6 +18,7 @@
         <label for="emailid">Email id</label>
         <input type="email" class="form-control" id="emailid"
                required
+              
                [(ngModel)]="model.emailid" name="emailid"
                #emailid="ngModel" >
         <div [hidden]="emailid.valid || emailid.pristine" 

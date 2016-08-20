@@ -45,6 +45,11 @@ console.log(heroForm);
 
 }
 
+changelistner(data:any)
+{
+  console.log(data);
+}
+
   Register(m:Regmodel) {
     console.log("register.ts");
 
