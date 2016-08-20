@@ -1,14 +1,14 @@
 <div class="container">
   <div  [hidden]="submitted">
     <h1>Register</h1>
-    <form *ngIf="active" (ngSubmit)="doTest(heroForm)"  #heroForm="ngForm">
+    <form *ngIf="active" (ngSubmit)="doTest(heroForm)"  #heroForm="ngForm"   (change)="changelistner(heroForm)">
       <div class="form-group">
         <label for="username">Username</label>
         <input type="text" class="form-control" id="username"
                required
               
                [(ngModel)]="model.username" name="username"
-               #username="ngModel"   (change)="changelistner($event)">
+               #username="ngModel"  >
         <div [hidden]="username.valid || username.pristine" 
              class="alert alert-danger">
           Username is required
