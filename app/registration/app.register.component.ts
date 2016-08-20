@@ -37,16 +37,19 @@ active=true;
 
   constructor(private router: Router, private httpService: Httptest) { }
 
-  doTest()
-  {
-    console.log(this.model);
-  }
+  doTest(heroForm:any)
+{
 
-  Register(username: string, email: string, pass1: string, pass2: string) {
+console.log(heroForm);
+//this.Register(this.model);  
+
+}
+
+  Register(m:Regmodel) {
     console.log("register.ts");
 
 
-    this.httpService.doReg(username, email, pass1, pass2)
+    this.httpService.doReg(m.username, m.emailid, m.password, m.password)
       .subscribe(
       data => {
 
@@ -55,7 +58,7 @@ active=true;
         if (this.getData.key != null) {
           localStorage.setItem('auth_token', this.getData.key);
           console.log(localStorage.getItem('auth_token'));
-          localStorage.setItem('loggedinuser', username);
+          localStorage.setItem('loggedinuser', m.username);
           this.router.navigate(['/myprofile']);
 
         }
